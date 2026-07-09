@@ -48,6 +48,19 @@
             flex-wrap: wrap;
         }
 
+        /* Top Left Branding With Logo Integration */
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand-logo {
+            height: 40px;
+            width: auto;
+            object-fit: contain;
+        }
+
         .brand h1 {
             margin: 0;
             font-size: 22px;
@@ -348,10 +361,10 @@
 </head>
 <body>
 
-    <!-- Executive Navigation Header -->
     <header>
         <div class="container header-grid">
             <div class="brand">
+                <img src="tbblusalogo.png" alt="TBBLUSA Logo" class="brand-logo">
                 <h1>Thin Black & Brown <span>Lines USA</span></h1>
             </div>
             <nav>
@@ -365,7 +378,6 @@
         </div>
     </header>
 
-    <!-- Main Entry Hero -->
     <section class="hero-section">
         <div class="container">
             <h2>Thin Black & Brown Lines USA</h2>
@@ -376,7 +388,6 @@
 
     <main class="container">
         
-        <!-- Section 1: The Great Seal Manifest -->
         <div class="grid-2">
             <div class="portal-card" style="border-top: 5px solid var(--primary-black);">
                 <h3>The Official Great Seal</h3>
@@ -393,13 +404,11 @@
             </div>
         </div>
 
-        <!-- Section 2: The 4-Tier Investment System -->
         <section class="investment-section">
             <h2 class="section-title" style="margin-bottom: 10px;">The Village Investment System</h2>
             <p style="color: var(--text-muted); margin: 0;">A 4-Tier Subscription Based Donation Program to Infuse Strength into our Communities.</p>
             
             <div class="investment-grid">
-                <!-- Observer -->
                 <div class="tier-block">
                     <h4>Observer</h4>
                     <div class="price">$10/mo</div>
@@ -409,7 +418,6 @@
                         <li>Monthly News Briefs</li>
                     </ul>
                 </div>
-                <!-- Builder -->
                 <div class="tier-block">
                     <h4>Builder</h4>
                     <div class="price">$25/mo</div>
@@ -419,7 +427,6 @@
                         <li>Good Deeds Credit</li>
                     </ul>
                 </div>
-                <!-- Architect -->
                 <div class="tier-block" style="border-color: var(--accent-gold);">
                     <h4>Architect</h4>
                     <div class="price">$100/mo</div>
@@ -429,7 +436,6 @@
                         <li>Infrastructure Priority</li>
                     </ul>
                 </div>
-                <!-- Sovereign -->
                 <div class="tier-block">
                     <h4>Sovereign</h4>
                     <div class="price">$500/mo</div>
@@ -445,7 +451,6 @@
             </div>
         </section>
 
-        <!-- Section 3: Open Source Ecosystem Grid -->
         <div class="github-banner">
             <h3>Open-Source Infrastructure Architecture</h3>
             <p>We are building a decentralized future. Our operational blueprints, software kernels, and community operating parameters are completely transparent and collaborative.</p>
@@ -457,7 +462,6 @@
 
     </main>
 
-    <!-- Comprehensive Vault & Directory Footer -->
     <footer>
         <div class="container">
             <div class="footer-grid">
@@ -467,16 +471,16 @@
                     <ul>
                         <li><a href="identity.html">Our Identity Matrix</a></li>
                         <li><a href="seal.html">The Great Seal Insignia</a></li>
-                        <li><a href="seal.html">Likeness Rights Vault</a></li>
+                        <li><a href="likeness-vault.html">Likeness Rights Vault</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
                     <h4>Field Operations</h4>
                     <ul>
-                        <li><a href="initiatives.html">Countering Corporate Exploitation</a></li>
-                        <li><a href="initiatives.html">Ending Police Brutality</a></li>
-                        <li><a href="initiatives.html">Data-Fusion Profile Audits</a></li>
+                        <li><a href="corporate-exploitation.html">Countering Corporate Exploitation</a></li>
+                        <li><a href="end-brutality.html">Ending Police Brutality</a></li>
+                        <li><a href="surveillance-audits.html">Data-Fusion Profile Audits</a></li>
                     </ul>
                 </div>
 
@@ -494,7 +498,7 @@
                     <ul>
                         <li><a href="github-village.html">Sovereign-Village-OS</a></li>
                         <li><a href="join.html">Intake Registry</a></li>
-                        <li><a href="procurement-hub.html">Solomon Kin LLC Synergy</a></li>
+                        <li><a href="solomon-kin-synergy.html">Solomon Kin LLC Synergy</a></li>
                     </ul>
                 </div>
 

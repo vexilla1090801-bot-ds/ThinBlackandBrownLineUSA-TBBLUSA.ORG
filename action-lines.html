@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Action Lines & Field Operations | Thin Black & Brown Lines USA</title>
+    <style>
+        :root {
+            --primary-black: #111111;
+            --primary-brown: #795548;
+            --accent-gold: #D4AF37;
+            --light-bg: #F9F9F9;
+            --pure-white: #FFFFFF;
+            --border-color: #E0E0E0;
+            --text-muted: #666666;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: var(--light-bg);
+            color: var(--primary-black);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            border-bottom: 4px solid var(--primary-brown);
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .brand h1 {
+            margin: 0;
+            font-size: 24px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .brand span {
+            color: var(--primary-brown);
+        }
+
+        nav a {
+            color: var(--pure-white);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-brown);
+        }
+
+        .hero-section {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero-section h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: var(--pure-white);
+        }
+
+        .hero-section p {
+            font-size: 18px;
+            color: var(--border-color);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        main {
+            padding: 50px 0;
+        }
+
+        .section-title {
+            border-left: 5px solid var(--primary-brown);
+            padding-left: 15px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .action-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 992px) {
+            .action-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .action-card {
+            background-color: var(--pure-white);
+            border: 1px solid var(--border-color);
+            border-top: 5px solid var(--primary-black);
+            border-radius: 4px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .action-card.center-focus {
+            border-top-color: var(--primary-brown);
+        }
+
+        .action-card h3 {
+            margin: 0 0 15px 0;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--primary-black);
+        }
+
+        .action-card p {
+            font-size: 15px;
+            color: #444444;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .ops-list {
+            margin: 0;
+            padding-left: 20px;
+            font-size: 14px;
+        }
+
+        .ops-list li {
+            margin-bottom: 10px;
+        }
+
+        .ops-list strong {
+            color: var(--primary-brown);
+        }
+
+        .foia-banner {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            padding: 40px;
+            border-radius: 4px;
+            margin-top: 50px;
+            border-right: 6px solid var(--accent-gold);
+        }
+
+        .foia-banner h3 {
+            margin: 0 0 10px 0;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .foia-banner p {
+            margin: 0 0 20px 0;
+            font-size: 16px;
+            color: var(--border-color);
+        }
+
+        .foia-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .foia-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .foia-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .foia-item strong {
+            color: var(--pure-white);
+            display: block;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        footer {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            text-align: center;
+            padding: 30px 0;
+            font-size: 13px;
+            border-top: 4px solid var(--primary-brown);
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: #888888;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-grid">
+            <div class="brand">
+                <h1>Thin Black & Brown <span>Lines USA</span></h1>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="identity.html">Identity</a>
+                <a href="action-lines.html" class="active">Action Lines</a>
+                <a href="grants.html">Grants</a>
+                <a href="github-village.html">GitHub Village</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <h2>Our Action Lines & Field Operations</h2>
+            <p>The operational blueprint mapping out our tactical directives to safeguard our communities from physical, economic, and digital exploitation.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <h2 class="section-title">Deployment Operations</h2>
+
+        <div class="action-grid">
+            <!-- Line 1: Corporate Racism -->
+            <div class="action-card">
+                <div>
+                    <h3>Countering Corporate Racism</h3>
+                    <p>Challenging modern economic exploitation by bringing historical truths directly to light. We audit and trace corporate wealth roots back to uncompensated systemic labor, pushing for institutional accountability and community reinvestment frameworks.</p>
+                </div>
+                <ul class="ops-list">
+                    <li><strong>Ancestry Auditing:</strong> Unveiling historical assets built on exploitation.</li>
+                    <li><strong>Accountability Mandates:</strong> Pressuring legacy entities to engage in transparent corporate responsibility.</li>
+                    <li><strong>Economic Literacy:</strong> Dismantling systemic financial dependency through community-led awareness.</li>
+                </ul>
+            </div>
+
+            <!-- Line 2: Police Brutality -->
+            <div class="action-card center-focus">
+                <div>
+                    <h3>Ending Police Brutality</h3>
+                    <p>Deploying grassroots advocacy alongside technological defensive measures to safeguard urban spaces from systemic over-policing and physical violence. We focus on transparent community structures to balance the structural equilibrium.</p>
+                </div>
+                <ul class="ops-list">
+                    <li><strong>Community Advocacy:</strong> Direct grassroots actions targeting institutional policies.</li>
+                    <li><strong>Neutral Monitoring:</strong> Deploying community safety nodes to create balanced observation parameters.</li>
+                    <li><strong>Rights Reclamation:</strong> Training neighborhoods in structural legal awareness and accountability protocols.</li>
+                </ul>
+            </div>
+
+            <!-- Line 3: Surveillance Audits -->
+            <div class="action-card">
+                <div>
+                    <h3>Surveillance & Profile Audits</h3>
+                    <p>Dismantling non-public, algorithmic database profiling systems. Law enforcement increasingly builds invisible threat and network profiles on regular citizens through closed AI data-fusion aggregators without public consent or transparency.</p>
+                </div>
+                <ul class="ops-list">
+                    <li><strong>System Audits:</strong> Tracking data-fusion center parameters to protect biometric sovereignty.</li>
+                    <li><strong>Profile Mapping:</strong> Helping citizens unearth and audit hidden digital records.</li>
+                    <li><strong>Ecosystem Defense:</strong> Creating privacy frameworks to counteract algorithmic profiling.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- FOIA Strategic Section -->
+        <div class="foia-banner">
+            <h3>Civic Tech Strategy: Exposing the Invisible Profiles</h3>
+            <p>Because automated AI surveillance systems operate inside closed networks, regular citizens are completely unaware that threat metrics are being compiled on them. Thin Black and Brown Lines USA runs localized clinics helping community members leverage the Freedom of Information Act (FOIA) to audit public profiles and hidden tracking architectures.</p>
+            
+            <div class="foia-grid">
+                <div class="foia-item">
+                    <strong>Vendor Contract Audits</strong>
+                    Targeting contracts and MOUs between local agencies and private analytics corporations to expose profiling software applications.
+                </div>
+                <div class="foia-item">
+                    <strong>Access Log Tracking</strong>
+                    Demanding operational audit trails detailing how municipal systems transmit biometric parameters to regional data hubs.
+                </div>
+                <div class="foia-item">
+                    <strong>Impact Assessments</strong>
+                    Forcing the public release of mandated algorithmic impact reviews to challenge biased profiling models.
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Thin Black & Brown Lines USA, Inc. | TGSOBAUSA.ORG | All Rights Reserved.</p>
+            <p>Compliance Contact | Principal Investigator: Nehemiah M. Brown | solomonkinllc@gmail.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>

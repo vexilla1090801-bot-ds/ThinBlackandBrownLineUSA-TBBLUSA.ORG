@@ -158,12 +158,32 @@
             }
         }
 
+        /* Interactive Branch Link Wrapper Style */
+        .branch-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .branch-link:hover {
+            transform: translateY(-3px);
+        }
+
         .branch-card {
             background-color: var(--pure-white);
             border: 1px solid var(--border-color);
             border-radius: 4px;
             padding: 30px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.01);
+            height: 100%;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        .branch-link:hover .branch-card {
+            border-color: var(--primary-brown);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.03);
         }
 
         .branch-card h3 {
@@ -177,6 +197,10 @@
             gap: 10px;
         }
 
+        .branch-link:hover h3 {
+            color: var(--primary-brown);
+        }
+
         .branch-path {
             font-family: 'Courier New', Courier, monospace;
             font-size: 13px;
@@ -186,10 +210,14 @@
             display: block;
         }
 
+        .branch-link:hover .branch-path {
+            color: var(--accent-gold);
+        }
+
         .branch-card p {
             font-size: 14px;
             color: #444444;
-            margin-bottom: 15px;
+            margin-bottom: 0;
             text-align: justify;
         }
 
@@ -253,7 +281,6 @@
 </head>
 <body>
 
-    <!-- Navigation Header -->
     <header>
         <div class="container header-grid">
             <div class="brand">
@@ -270,7 +297,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
             <h2>Core Architecture Portal</h2>
@@ -280,7 +306,6 @@
 
     <main class="container">
         
-        <!-- Live Terminal Ingestion Feed -->
         <div class="terminal-banner">
             <div class="terminal-header">Sovereign-Village-OS // Mainframe Diagnostic Console</div>
             <div class="terminal-line"><span class="terminal-command">tbblusa@os:~$</span> initializing deployment handshake...</div>
@@ -290,38 +315,42 @@
 
         <h2 class="section-title">Development Branches</h2>
         
-        <!-- Active Branches Mapping -->
         <div class="branch-grid">
-            <!-- Branch 1 -->
-            <div class="branch-card">
-                <h3>⚖️ The Justice Branch</h3>
-                <span class="branch-path">/justice-code</span>
-                <p>Replacing standard structural remediation models with transparent, unyielding parameters of human integrity. This core environment runs our specialized mentorship algorithms and distributed reentry blueprints.</p>
-            </div>
+            
+            <a href="justice-code.html" class="branch-link">
+                <div class="branch-card">
+                    <h3>⚖️ The Justice Branch</h3>
+                    <span class="branch-path">/justice-code</span>
+                    <p>Replacing standard structural remediation models with transparent, unyielding parameters of human integrity. This core environment runs our specialized mentorship algorithms and distributed reentry blueprints.</p>
+                </div>
+            </a>
 
-            <!-- Branch 2 -->
-            <div class="branch-card">
-                <h3>🏠 The Infrastructure Branch</h3>
-                <span class="branch-path">/pillar-house</span>
-                <p>Architectural engineering blueprints and localized site layout parameters for our physical "Pillar House" facilities, organizing urban scaling from Philadelphia to a national footprint.</p>
-            </div>
+            <a href="pillar-house.html" class="branch-link">
+                <div class="branch-card">
+                    <h3>🏠 The Infrastructure Branch</h3>
+                    <span class="branch-path">/pillar-house</span>
+                    <p>Architectural engineering blueprints and localized site layout parameters for our physical "Pillar House" facilities, organizing urban scaling from Philadelphia to a national footprint.</p>
+                </div>
+            </a>
 
-            <!-- Branch 3 -->
-            <div class="branch-card">
-                <h3>📈 The Economic Branch</h3>
-                <span class="branch-path">/economic-foundry</span>
-                <p>Technical training configurations and compliance scripts tailored to empower local enterprises to win government contract bids, coupled with management layers for subscription allocation.</p>
-            </div>
+            <a href="economic-foundry.html" class="branch-link">
+                <div class="branch-card">
+                    <h3>📈 The Economic Branch</h3>
+                    <span class="branch-path">/economic-foundry</span>
+                    <p>Technical training configurations and compliance scripts tailored to empower local enterprises to win government contract bids, coupled with management layers for subscription allocation.</p>
+                </div>
+            </a>
 
-            <!-- Branch 4 -->
-            <div class="branch-card">
-                <h3>🤝 The Community Branch</h3>
-                <span class="branch-path">/pillar-clubs</span>
-                <p>Distributed coordination scripts, localized network toolsets, and platform configurations for managing identity awareness frameworks, digital registry databases, and civic validation campaigns.</p>
-            </div>
+            <a href="pillar-clubs.html" class="branch-link">
+                <div class="branch-card">
+                    <h3>🤝 The Community Branch</h3>
+                    <span class="branch-path">/pillar-clubs</span>
+                    <p>Distributed coordination scripts, localized network toolsets, and platform configurations for managing identity awareness frameworks, digital registry databases, and civic validation campaigns.</p>
+                </div>
+            </a>
+            
         </div>
 
-        <!-- Integrated README Repository Vault -->
         <div class="readme-container">
             <div class="readme-header">
                 <h3>🏛️ REPOSITORY_MANIFEST: README.md</h3>
@@ -348,7 +377,6 @@
 
     </main>
 
-    <!-- Formal Corporate Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2026 Thin Black & Brown Lines USA, Inc. | TGSOBAUSA.ORG | All Rights Reserved.</p>

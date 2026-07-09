@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Village Investment System | Thin Black & Brown Lines USA</title>
+    <style>
+        :root {
+            --primary-black: #111111;
+            --primary-brown: #795548;
+            --accent-gold: #D4AF37;
+            --light-bg: #F9F9F9;
+            --pure-white: #FFFFFF;
+            --border-color: #E0E0E0;
+            --text-muted: #666666;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: var(--light-bg);
+            color: var(--primary-black);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            border-bottom: 4px solid var(--primary-brown);
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .brand h1 {
+            margin: 0;
+            font-size: 24px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .brand span {
+            color: var(--primary-brown);
+        }
+
+        nav a {
+            color: var(--pure-white);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-brown);
+        }
+
+        .hero-section {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero-section h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: var(--pure-white);
+        }
+
+        .hero-section p {
+            font-size: 18px;
+            color: var(--border-color);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        main {
+            padding: 50px 0;
+        }
+
+        .section-title {
+            border-left: 5px solid var(--primary-brown);
+            padding-left: 15px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tier-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            align-items: stretch;
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: 1200px) {
+            .tier-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .tier-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .tier-card {
+            background-color: var(--pure-white);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.01);
+        }
+
+        .tier-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+        }
+
+        .tier-card.featured {
+            border: 2px solid var(--accent-gold);
+            background-color: #FFFDF9;
+        }
+
+        .featured-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--accent-gold);
+            color: var(--primary-black);
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .tier-header {
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .tier-name {
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 0 0 10px 0;
+            color: var(--primary-black);
+        }
+
+        .tier-price {
+            font-size: 32px;
+            font-weight: bold;
+            color: var(--primary-brown);
+        }
+
+        .tier-price span {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: normal;
+        }
+
+        .tier-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+            flex-grow: 1;
+        }
+
+        .tier-features li {
+            font-size: 14px;
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            color: #333333;
+        }
+
+        .tier-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-brown);
+            font-weight: bold;
+        }
+
+        .tier-card.featured .tier-features li::before {
+            color: var(--accent-gold);
+        }
+
+        .btn-subscribe {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            text-decoration: none;
+            padding: 12px 0;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            border-bottom: 3px solid var(--primary-brown);
+            transition: background-color 0.3s;
+            box-sizing: border-box;
+        }
+
+        .btn-subscribe:hover {
+            background-color: #222222;
+        }
+
+        .tier-card.featured .btn-subscribe {
+            border-bottom-color: var(--accent-gold);
+        }
+
+        .engine-notice {
+            background-color: var(--pure-white);
+            border: 1px solid var(--border-color);
+            border-left: 5px solid var(--primary-brown);
+            padding: 25px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #444444;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+        }
+
+        .engine-notice h4 {
+            margin: 0 0 8px 0;
+            text-transform: uppercase;
+            color: var(--primary-black);
+            letter-spacing: 0.5px;
+        }
+
+        footer {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            text-align: center;
+            padding: 30px 0;
+            font-size: 13px;
+            border-top: 4px solid var(--primary-brown);
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: #888888;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-grid">
+            <div class="brand">
+                <h1>Thin Black & Brown <span>Lines USA</span></h1>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="identity.html">Identity</a>
+                <a href="initiatives.html">Action Lines</a>
+                <a href="grants.html">Grants</a>
+                <a href="github-village.html">GitHub Village</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <h2>The Village Investment System</h2>
+            <p>An institutional 4-tier subscription framework engineered to infuse structural strength, psychological autonomy, and digital sovereignty into our communities.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <h2 class="section-title">Select Operational Investment Tier</h2>
+
+        <div class="tier-grid">
+            
+            <!-- Tier 1: Observer -->
+            <div class="tier-card">
+                <div class="tier-header">
+                    <h3 class="tier-name">Observer</h3>
+                    <div class="tier-price">$10<span>/mo</span></div>
+                </div>
+                <ul class="tier-features">
+                    <li>Foundational Operational Support</li>
+                    <li>Community Voting Awareness Portals</li>
+                    <li>Monthly Data-Fusion Policy Briefs</li>
+                </ul>
+                <a href="#" class="btn-subscribe" onclick="event.preventDefault(); alert('Initializing secure intake gateway for the Observer module.');">Initialize Commitment</a>
+            </div>
+
+            <!-- Tier 2: Builder -->
+            <div class="tier-card">
+                <div class="tier-header">
+                    <h3 class="tier-name">Builder</h3>
+                    <div class="tier-price">$25<span>/mo</span></div>
+                </div>
+                <ul class="tier-features">
+                    <li>Active Workforce Re-entry Mentorship</li>
+                    <li>Sovereign Community Status Badge</li>
+                    <li>Localized Good Deeds Ledger Credit</li>
+                </ul>
+                <a href="#" class="btn-subscribe" onclick="event.preventDefault(); alert('Initializing secure intake gateway for the Builder module.');">Initialize Commitment</a>
+            </div>
+
+            <!-- Tier 3: Architect -->
+            <div class="tier-card featured">
+                <div class="featured-badge">Highly Aligned</div>
+                <div class="tier-header">
+                    <h3 class="tier-name">Architect</h3>
+                    <div class="tier-price">$100<span>/mo</span></div>
+                </div>
+                <ul class="tier-features">
+                    <li>Minted Physical Custom Identity Coin</li>
+                    <li>Specialized Government Procurement Training</li>
+                    <li>Local Infrastructure Project Priority</li>
+                </ul>
+                <a href="#" class="btn-subscribe" onclick="event.preventDefault(); alert('Initializing secure intake gateway for the Architect module.');">Initialize Commitment</a>
+            </div>
+
+            <!-- Tier 4: Sovereign -->
+            <div class="tier-card">
+                <div class="tier-header">
+                    <h3 class="tier-name">Sovereign</h3>
+                    <div class="tier-price">$500<span>/mo</span></div>
+                </div>
+                <ul class="tier-features">
+                    <li>National Legacy Leadership Appointment</li>
+                    <li>AI Identity Protection Suites (Bio-Sign™)</li>
+                    <li>Closed Executive Strategy Access</li>
+                </ul>
+                <a href="#" class="btn-subscribe" onclick="event.preventDefault(); alert('Initializing secure intake gateway for the Sovereign module.');">Initialize Commitment</a>
+            </div>
+
+        </div>
+
+        <!-- Processing Engine Information -->
+        <div class="engine-notice">
+            <h4>Processing Framework Architecture Notice</h4>
+            <p>
+                The Village Investment System functions as a automated recurring commitment infrastructure. All transactions are securely audited, encrypted, and channeled transparently into our operational accounts. In alignment with the transparency mandates displayed within our public Stewardship Archives, recurring contributions directly fund localized technology node implementation, digital human literacy academies, and field advocacy networks. Under our current Memorandum of Understanding, security parameters and interface integrity are continuously optimized by Solomon Kin LLC.
+            </p>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Thin Black & Brown Lines USA, Inc. | TGSOBAUSA.ORG | All Rights Reserved.</p>
+            <p>Compliance & Treasury Contact | Principal Investigator: Nehemiah M. Brown | solomonkinllc@gmail.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>

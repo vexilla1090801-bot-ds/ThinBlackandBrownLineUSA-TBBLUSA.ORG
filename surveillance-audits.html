@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data-Fusion Profile Audits | Thin Black & Brown Lines USA</title>
+    <style>
+        :root {
+            --primary-black: #111111;
+            --primary-brown: #795548;
+            --accent-gold: #D4AF37;
+            --light-bg: #F9F9F9;
+            --pure-white: #FFFFFF;
+            --border-color: #E0E0E0;
+            --text-muted: #666666;
+            --terminal-green: #A9F5A9;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: var(--light-bg);
+            color: var(--primary-black);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            border-bottom: 4px solid var(--primary-brown);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .brand h1 {
+            margin: 0;
+            font-size: 22px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .brand span {
+            color: var(--primary-brown);
+        }
+
+        nav a {
+            color: var(--pure-white);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            font-size: 13px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-gold);
+        }
+
+        .hero-section {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero-section h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-section p {
+            font-size: 18px;
+            color: var(--border-color);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        main {
+            padding: 50px 0;
+        }
+
+        .section-title {
+            border-left: 5px solid var(--primary-brown);
+            padding-left: 15px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 24px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: 992px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background-color: var(--pure-white);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 35px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.01);
+            box-sizing: border-box;
+        }
+
+        .audit-info h3 {
+            margin-top: 0;
+            text-transform: uppercase;
+            font-size: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .audit-info p {
+            font-size: 15px;
+            color: #444444;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .terminal-box {
+            background-color: #000000;
+            color: var(--terminal-green);
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 4px;
+            font-size: 13px;
+            border: 1px solid #333333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+            background-color: var(--light-bg);
+            transition: border-color 0.3s, background-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-brown);
+            background-color: var(--pure-white);
+        }
+
+        .btn-submit {
+            display: block;
+            width: 100%;
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            border: none;
+            padding: 15px;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            cursor: pointer;
+            border-bottom: 3px solid var(--primary-brown);
+            transition: background-color 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #222222;
+        }
+
+        footer {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 13px;
+            border-top: 4px solid var(--primary-brown);
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: #888888;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-grid">
+            <div class="brand">
+                <h1>Thin Black & Brown <span>Lines USA</span></h1>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="initiatives.html">Action Lines</a>
+                <a href="github-village.html">Core Architecture</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <h2>Data-Fusion Profile Audits</h2>
+            <p>Civic Technology, Freedom of Information Act (FOIA) Interventions & Algorithmic Defense</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="grid-2">
+            
+            <div class="card audit-info">
+                <h3>Unveiling the Invisible Algorithms</h3>
+                <p>
+                    Modern surveillance centers run highly integrated AI data-fusion platforms that compile hidden network connections, behavioral track records, and automated threat signatures on everyday citizens without explicit consent. These closed algorithmic loops introduce systemic profiling into urban environments, tracking individuals without transparency.
+                </p>
+                <p>
+                    Thin Black and Brown Lines USA counters this through structured civic tech interventions. We organize local community check-ups and design templates that leverage the Freedom of Information Act (FOIA). This work helps community members track database logs, audit algorithmic accuracy scores, and maintain absolute biometric sovereignty over their digital footprints.
+                </p>
+
+                <div class="terminal-box">
+                    <strong>[Sovereign Mesh Audit Engine]</strong><br>
+                    $ ./audit_fusion_center.py --query=local_nodes<br>
+                    > Intercepting tracking data streams... DONE<br>
+                    > Analyzing contract signatures... PRIVATE_VENDOR [FOUND]<br>
+                    > FOIA Generator Protocol: READY FOR ALLOCATION
+                </div>
+            </div>
+
+            <div class="card" style="border-top: 5px solid var(--primary-black);">
+                <h3 style="margin-top:0; font-size: 16px; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">
+                    Profile Verification Intake
+                </h3>
+                
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Profile parameters successfully registered. FOIA template request pipeline initialized.');">
+                    <div class="form-group">
+                        <label for="requester-name">Full Legal Name</label>
+                        <input type="text" id="requester-name" class="form-control" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="target-agency">Target Municipal Agency / Fusion Center</label>
+                        <input type="text" id="target-agency" class="form-control" placeholder="e.g., Regional Intelligence Center, Local Police Dept" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="audit-class">Specific Audit Classification Focus</label>
+                        <select id="audit-class" class="form-control">
+                            <option value="biometric">Facial Recognition & Biometric Ingestion Records</option>
+                            <option value="network">Predictive Analytics & Invisible Network Association Mapping</option>
+                            <option value="vendor">Private Software Vendor Contract & Data Sharing Audits</option>
+                            <option value="transit">License Plate Reader (LPR) & Geolocation Log Verification</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="audit-notes">Relevant Information / Verification Parameters</label>
+                        <textarea id="audit-notes" class="form-control" rows="4" placeholder="Detail any specific time frames, transit lines, or software surveillance vendor systems you suspect are tracking your profile parameters non-consensually..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Generate FOIA Audit Request Protocol</button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Thin Black & Brown Lines USA, Inc. | TGSOBAUSA.ORG | All Rights Reserved.</p>
+            <p>Biometric Sovereignty & Algorithmic Defense Core | Principal Investigator: Nehemiah M. Brown | solomonkinllc@gmail.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>

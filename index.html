@@ -3,131 +3,508 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thin Black & Brown Lines USA | The Great Seal Identity</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Thin Black & Brown Lines USA | Official Sovereign Portal</title>
     <style>
         :root {
-            --gold: #D4AF37;
-            --deep-blue: #0A192F;
-            --black: #121212;
-            --brown: #8B4513;
-            --white: #F8F9FA;
+            --primary-black: #111111;
+            --primary-brown: #795548;
+            --accent-gold: #D4AF37;
+            --light-bg: #F9F9F9;
+            --pure-white: #FFFFFF;
+            --border-color: #E0E0E0;
+            --text-muted: #666666;
         }
-        body { margin: 0; font-family: 'Montserrat', sans-serif; background-color: var(--white); color: var(--black); }
-        
-        /* Hero Section */
-        header { 
-            background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('hero-bg.jpg'); 
-            background-size: cover; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: white;
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: var(--light-bg);
+            color: var(--primary-black);
+            margin: 0;
+            padding: 0;
         }
-        .tbbl-logo { width: 150px; margin-bottom: 20px; }
-        .hero-title { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin: 0; }
-        .hero-subtitle { font-size: 1.2rem; letter-spacing: 2px; color: var(--gold); text-transform: uppercase; margin-top: 10px; }
-        
-        /* Navigation */
-        nav { background: var(--black); padding: 20px 0; position: sticky; top: 0; z-index: 1000; text-align: center; }
-        nav a { color: white; text-decoration: none; margin: 0 20px; font-weight: bold; text-transform: uppercase; font-size: 0.9rem; transition: 0.3s; }
-        nav a:hover { color: var(--gold); }
 
-        /* The Seal Section */
-        .seal-section { padding: 80px 10%; text-align: center; background: #fff; }
-        .great-seal { width: 300px; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border-radius: 50%; }
-
-        /* Tier System Section */
-        .tiers { display: flex; justify-content: space-around; padding: 50px 5%; background: #f0f0f0; }
-        .tier-card { 
-            background: white; border-top: 5px solid var(--gold); width: 22%; padding: 30px; border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: transform 0.3s;
+        header {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            border-bottom: 4px solid var(--primary-brown);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
-        .tier-card:hover { transform: translateY(-10px); }
-        .tier-name { color: var(--deep-blue); font-size: 1.5rem; margin-bottom: 10px; }
-        .tier-price { font-size: 2rem; font-weight: bold; color: var(--brown); }
-        .tier-perks { list-style: none; padding: 0; text-align: left; font-size: 0.85rem; }
-        .tier-perks li { margin: 10px 0; border-bottom: 1px solid #eee; padding-bottom: 5px; }
 
-        /* Footer */
-        footer { background: var(--black); color: white; padding: 50px 10%; text-align: center; }
-        .github-link { color: var(--gold); text-decoration: none; font-weight: bold; }
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .brand h1 {
+            margin: 0;
+            font-size: 22px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .brand span {
+            color: var(--primary-brown);
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav a {
+            color: var(--pure-white);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+            padding: 5px 0;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-gold);
+            border-bottom: 2px solid var(--accent-gold);
+        }
+
+        .hero-section {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            padding: 80px 0;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .hero-section h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-section p {
+            font-size: 18px;
+            color: var(--border-color);
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--primary-brown);
+            color: var(--pure-white);
+            text-decoration: none;
+            padding: 12px 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            border-radius: 4px;
+            border-bottom: 3px solid #4e342e;
+            transition: background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #5d4037;
+        }
+
+        main {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            border-left: 5px solid var(--primary-brown);
+            padding-left: 15px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 24px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .portal-card {
+            background-color: var(--pure-white);
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.01);
+        }
+
+        .portal-card h3 {
+            margin: 0 0 15px 0;
+            text-transform: uppercase;
+            font-size: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .portal-card p {
+            font-size: 15px;
+            color: #444444;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* 4-Tier System Display */
+        .investment-section {
+            background-color: var(--pure-white);
+            border: 1px solid var(--border-color);
+            padding: 50px 40px;
+            border-radius: 4px;
+            margin-bottom: 60px;
+        }
+
+        .investment-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 992px) {
+            .investment-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .investment-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .tier-block {
+            background-color: var(--light-bg);
+            border: 1px solid var(--border-color);
+            border-top: 4px solid var(--primary-black);
+            padding: 25px 15px;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .tier-block h4 {
+            margin: 0 0 5px 0;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        .tier-block .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-brown);
+            margin-bottom: 15px;
+        }
+
+        .tier-block ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+            font-size: 13px;
+        }
+
+        .tier-block li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .tier-block li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-brown);
+            font-weight: bold;
+        }
+
+        /* GitHub Infrastructure Banner */
+        .github-banner {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            padding: 40px;
+            border-radius: 4px;
+            border-left: 6px solid var(--accent-gold);
+            margin-bottom: 40px;
+        }
+
+        .github-banner h3 {
+            color: var(--accent-gold);
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .github-banner p {
+            margin: 0 0 20px 0;
+            font-size: 15px;
+            color: var(--border-color);
+        }
+
+        .code-box {
+            background-color: #000000;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 12px;
+            border-radius: 4px;
+            color: #A9F5A9;
+            font-size: 14px;
+            display: inline-block;
+            border: 1px solid #333333;
+        }
+
+        /* Comprehensive Directory Footer */
+        footer {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            padding: 60px 0 30px 0;
+            border-top: 4px solid var(--primary-brown);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            border-bottom: 1px solid #222222;
+            padding-bottom: 40px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .footer-col h4 {
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            font-size: 13px;
+            letter-spacing: 1px;
+            margin: 0 0 20px 0;
+            border-bottom: 1px solid #222222;
+            padding-bottom: 5px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #BBBBBB;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: var(--pure-white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 12px;
+            color: #666666;
+        }
+
+        .footer-bottom p {
+            margin: 5px 0;
+        }
     </style>
 </head>
 <body>
 
-    <nav>
-        <a href="#about">Our Identity</a>
-        <a href="#programs">Action Lines</a>
-        <a href="#grants">Grant Initiatives</a>
-        <a href="#github">GitHub Village</a>
-        <a href="#donate" style="color: var(--gold);">Join The Village</a>
-    </nav>
-
+    <!-- Executive Navigation Header -->
     <header>
-        <img src="tbblusalogo.png" alt="TBBL USA Logo" class="tbbl-logo">
-        <h1 class="hero-title">The Pillars of America</h1>
-        <p class="hero-subtitle">Thin Black & Brown Lines USA Nonprofit Corporation</p>
-        <div style="margin-top: 30px;">
-            <button style="background: var(--gold); border: none; padding: 15px 30px; font-weight: bold; cursor: pointer;">EXPLORE THE GREAT SEAL</button>
+        <div class="container header-grid">
+            <div class="brand">
+                <h1>Thin Black & Brown <span>Lines USA</span></h1>
+            </div>
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="identity.html">Identity</a>
+                <a href="initiatives.html">Action Lines</a>
+                <a href="grants.html">Grants</a>
+                <a href="join.html">Join The Village</a>
+                <a href="github-village.html">GitHub Village</a>
+            </nav>
         </div>
     </header>
 
-    <section id="about" class="seal-section">
-        <img src="great-seal.png" alt="The Great Seal of Black and Brown People" class="great-seal">
-        <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem;">The Official Great Seal</h2>
-        <p style="max-width: 800px; margin: 20px auto; line-height: 1.6;">
-            Copyrighted and protected by <strong>TBBLUSA.ORG</strong>, the Great Seal is the monumental identity of Black and Brown people in the United States. We document existence, safeguard AI-identities, and honor the true pillars of American society.
-        </p>
-    </section>
-
-    <section id="donate" class="seal-section" style="background: var(--deep-blue); color: white;">
-        <h2>The Village Investment System</h2>
-        <p>A 4-Tier Subscription Based Donation Program to Infuse Strength into our Communities.</p>
-        <div class="tiers">
-            <div class="tier-card" style="color: #333;">
-                <div class="tier-name">Observer</div>
-                <div class="tier-price">$10/mo</div>
-                <ul class="tier-perks">
-                    <li>✓ Foundational Support</li>
-                    <li>✓ Voting Awareness Access</li>
-                    <li>✓ Monthly News Briefs</li>
-                </ul>
-            </div>
-            <div class="tier-card" style="color: #333;">
-                <div class="tier-name">Builder</div>
-                <div class="tier-price">$25/mo</div>
-                <ul class="tier-perks">
-                    <li>✓ Re-entry Mentorship</li>
-                    <li>✓ Community Status Badge</li>
-                    <li>✓ Good Deeds Credit</li>
-                </ul>
-            </div>
-            <div class="tier-card" style="color: #333;">
-                <div class="tier-name">Architect</div>
-                <div class="tier-price">$100/mo</div>
-                <ul class="tier-perks">
-                    <li>✓ Physical Identity Coin</li>
-                    <li>✓ Government Contract Training</li>
-                    <li>✓ Infrastructure Priority</li>
-                </ul>
-            </div>
-            <div class="tier-card" style="color: #333;">
-                <div class="tier-name">Sovereign</div>
-                <div class="tier-price">$500/mo</div>
-                <ul class="tier-perks">
-                    <li>✓ National Legacy Leadership</li>
-                    <li>✓ AI Identity Protection</li>
-                    <li>✓ Private Strategy Access</li>
-                </ul>
-            </div>
+    <!-- Main Entry Hero -->
+    <section class="hero-section">
+        <div class="container">
+            <h2>Thin Black & Brown Lines USA</h2>
+            <p>A Solution-Based Organization extending from Philadelphia to the Nation. Building community sovereignty, architectural infrastructure, and technological defense parameters.</p>
+            <a href="join.html" class="btn-primary">Join The Village</a>
         </div>
     </section>
 
-    <footer id="github">
-        <p>A Solution-Based Organization extending from Philadelphia to the Nation.</p>
-        <p>Building a decentralized future on <a href="#" class="github-link">GitHub: Sovereign-Village-OS</a></p>
-        <hr style="border: 0.5px solid #333; margin: 30px 0;">
-        <p style="font-size: 0.8rem; opacity: 0.6;">
-            © 2026 Thin Black & Brown Lines USA, Inc. | TGSOBAUSA.ORG | All Rights Reserved.
-        </p>
+    <main class="container">
+        
+        <!-- Section 1: The Great Seal Manifest -->
+        <div class="grid-2">
+            <div class="portal-card" style="border-top: 5px solid var(--primary-black);">
+                <h3>The Official Great Seal</h3>
+                <p>
+                    Copyrighted and protected by TBBLUSA.ORG, the Great Seal is the monumental identity of Black and Brown people in the United States. We document existence, safeguard AI-identities, and honor the true pillars of American society. Reclaiming our baseline historical parameters ensures corporate, social, and civic protection across all jurisdictions.
+                </p>
+                <a href="seal.html" class="btn-primary" style="background-color: var(--primary-black);">Explore the Great Seal</a>
+            </div>
+            <div>
+                <h2 class="section-title">Our Core Blueprint</h2>
+                <p style="text-align: justify; font-size: 16px;">
+                    Thin Black & Brown Lines USA operates as an elite, high-impact non-profit corporation. We transcend traditional social mitigation methods to provide <strong>Total Community Architecture</strong>. Moving seamlessly between community-led field action and next-generation software development, we lay out the legal, digital, and financial parameters needed to establish independent permanence for our people.
+                </p>
+            </div>
+        </div>
+
+        <!-- Section 2: The 4-Tier Investment System -->
+        <section class="investment-section">
+            <h2 class="section-title" style="margin-bottom: 10px;">The Village Investment System</h2>
+            <p style="color: var(--text-muted); margin: 0;">A 4-Tier Subscription Based Donation Program to Infuse Strength into our Communities.</p>
+            
+            <div class="investment-grid">
+                <!-- Observer -->
+                <div class="tier-block">
+                    <h4>Observer</h4>
+                    <div class="price">$10/mo</div>
+                    <ul>
+                        <li>Foundational Support</li>
+                        <li>Voting Awareness Access</li>
+                        <li>Monthly News Briefs</li>
+                    </ul>
+                </div>
+                <!-- Builder -->
+                <div class="tier-block">
+                    <h4>Builder</h4>
+                    <div class="price">$25/mo</div>
+                    <ul>
+                        <li>Re-entry Mentorship</li>
+                        <li>Community Status Badge</li>
+                        <li>Good Deeds Credit</li>
+                    </ul>
+                </div>
+                <!-- Architect -->
+                <div class="tier-block" style="border-color: var(--accent-gold);">
+                    <h4>Architect</h4>
+                    <div class="price">$100/mo</div>
+                    <ul>
+                        <li>Physical Identity Coin</li>
+                        <li>Government Contract Training</li>
+                        <li>Infrastructure Priority</li>
+                    </ul>
+                </div>
+                <!-- Sovereign -->
+                <div class="tier-block">
+                    <h4>Sovereign</h4>
+                    <div class="price">$500/mo</div>
+                    <ul>
+                        <li>National Legacy Leadership</li>
+                        <li>AI Identity Protection</li>
+                        <li>Private Strategy Access</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="invest.html" class="btn-primary">Activate Investment Tier</a>
+            </div>
+        </section>
+
+        <!-- Section 3: Open Source Ecosystem Grid -->
+        <div class="github-banner">
+            <h3>Open-Source Infrastructure Architecture</h3>
+            <p>We are building a decentralized future. Our operational blueprints, software kernels, and community operating parameters are completely transparent and collaborative.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+                <div class="code-box">git clone https://github.com/Sovereign-Village-OS</div>
+                <a href="github-village.html" class="btn-primary" style="background-color: var(--pure-white); color: var(--primary-black); border-bottom-color: var(--border-color);">Explore Repository Files</a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Comprehensive Vault & Directory Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-col">
+                    <h4>Sovereign Identity</h4>
+                    <ul>
+                        <li><a href="identity.html">Our Identity Matrix</a></li>
+                        <li><a href="seal.html">The Great Seal Insignia</a></li>
+                        <li><a href="seal.html">Likeness Rights Vault</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Field Operations</h4>
+                    <ul>
+                        <li><a href="initiatives.html">Countering Corporate Exploitation</a></li>
+                        <li><a href="initiatives.html">Ending Police Brutality</a></li>
+                        <li><a href="initiatives.html">Data-Fusion Profile Audits</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Capital & Procurement</h4>
+                    <ul>
+                        <li><a href="grants.html">Active Municipal Proposals</a></li>
+                        <li><a href="procurement-hub.html">NIGP/NAICS Codes Ledger</a></li>
+                        <li><a href="invest.html">The Village Investment System</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>The Developer Core</h4>
+                    <ul>
+                        <li><a href="github-village.html">Sovereign-Village-OS</a></li>
+                        <li><a href="join.html">Intake Registry</a></li>
+                        <li><a href="procurement-hub.html">Solomon Kin LLC Synergy</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Thin Black & Brown Lines USA, Inc. | TGSOBAUSA.ORG | All Rights Reserved.</p>
+                <p>Executive Office Support | Principal Investigator: Nehemiah M. Brown, Chief Technology Officer</p>
+            </div>
+        </div>
     </footer>
 
 </body>

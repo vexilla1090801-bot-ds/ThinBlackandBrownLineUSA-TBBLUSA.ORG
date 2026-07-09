@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Justice Branch | Thin Black & Brown Lines USA</title>
+    <style>
+        :root {
+            --primary-black: #111111;
+            --primary-brown: #795548;
+            --accent-gold: #D4AF37;
+            --light-bg: #F9F9F9;
+            --pure-white: #FFFFFF;
+            --border-color: #E0E0E0;
+            --text-muted: #666666;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: var(--light-bg);
+            color: var(--primary-black);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            border-bottom: 4px solid var(--primary-brown);
+            padding: 15px 0;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .brand h1 {
+            margin: 0;
+            font-size: 22px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .brand span {
+            color: var(--primary-brown);
+        }
+
+        nav a {
+            color: var(--pure-white);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-gold);
+        }
+
+        .hero-section {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero-section h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            border-left: 5px solid var(--primary-brown);
+            padding-left: 15px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            font-size: 22px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background-color: var(--pure-white);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 35px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.01);
+        }
+
+        .code-block {
+            background-color: #000000;
+            color: #A9F5A9;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            overflow-x: auto;
+            border: 1px solid #333333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+            background-color: var(--light-bg);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-brown);
+            background-color: var(--pure-white);
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            border: none;
+            padding: 15px;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            cursor: pointer;
+            border-bottom: 3px solid var(--primary-brown);
+        }
+
+        .btn-submit:hover {
+            background-color: #222222;
+        }
+
+        footer {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 13px;
+            border-top: 4px solid var(--primary-brown);
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-grid">
+            <div class="brand">
+                <h1>Thin Black & Brown <span>Lines USA</span></h1>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="github-village.html">Core Architecture</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <h2>The Justice Branch</h2>
+            <p>Environment Path: /justice-code</p>
+        </div>
+    </section>
+
+    <main class="container" style="padding: 50px 0;">
+        <div class="grid-2">
+            
+            <!-- Technical Overview -->
+            <div>
+                <h2 class="section-title">Total Community Remediation</h2>
+                <div class="card">
+                    <p style="text-align: justify;">
+                        Replacing standard structural remediation models with transparent, unyielding parameters of human integrity. This environment runs our specialized mentorship algorithms, predictive integration scripts, and distributed reentry blueprints. We focus on establishing permanent accountability to disrupt the cycles of institutional extraction and street-level vulnerability.
+                    </p>
+                    <h4>Algorithm Status Snapshot</h4>
+                    <pre class="code-block">
+[Handshake OS: /justice-code/reentry]
+$ status --check mentor-matching-v1
+> Mentorship Matrix: ACTIVE
+> Core Ledger Sync: COMPLETE
+> Integrity Framework: ENFORCED
+$ verify --integrity-score
+> Calculated baseline accuracy: 99.84%</pre>
+                </div>
+            </div>
+
+            <!-- Programmatic Form -->
+            <div>
+                <h2 class="section-title">Reentry & Mentorship Registry</h2>
+                <div class="card" style="border-top: 5px solid var(--primary-black);">
+                    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Handshake protocol initialized. Data securely stored.');">
+                        <div class="form-group">
+                            <label for="participant-id">Registry Name / Alias</label>
+                            <input type="text" id="participant-id" class="form-control" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-method">Secure Communication Channel</label>
+                            <input type="email" id="contact-method" class="form-control" placeholder="name@securechannel.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mentorship-type">Core Focus Domain</label>
+                            <select id="mentorship-type" class="form-control">
+                                <option value="reentry">Workforce Reentry & Skill Transition</option>
+                                <option value="integrity">Goodness Initiative Alignment & Accountability</option>
+                                <option value="civic">Civic Advocacy & Systemic Literacy</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="experience-summary">Operational Background / Notes</label>
+                            <textarea id="experience-summary" class="form-control" rows="4" placeholder="Detail any training history, current requirements, or specific environmental variables..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Initialize Handshake Protocol</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Thin Black & Brown Lines USA, Inc. | TGSOBAUSA.ORG | All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

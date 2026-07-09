@@ -1,0 +1,380 @@
+Here is the raw, semantic HTML code for your **`initiatives.html`** page. It is perfectly styled to match the aesthetic of `grants.html`, utilizing your official color palette (Black, Brown, White) and incorporating gold accents for a highly premium, institutional look.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Initiatives | Thin Black & Brown Lines USA</title>
+    <style>
+        :root {
+            --primary-black: #111111;
+            --primary-brown: #795548;
+            --accent-gold: #D4AF37;
+            --light-bg: #F9F9F9;
+            --pure-white: #FFFFFF;
+            --border-color: #E0E0E0;
+            --text-muted: #666666;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: var(--light-bg);
+            color: var(--primary-black);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            border-bottom: 4px solid var(--primary-brown);
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .brand h1 {
+            margin: 0;
+            font-size: 24px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .brand span {
+            color: var(--primary-brown);
+        }
+
+        nav a {
+            color: var(--pure-white);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-brown);
+        }
+
+        .hero-section {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero-section h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: var(--pure-white);
+        }
+
+        .hero-section p {
+            font-size: 18px;
+            color: var(--border-color);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        main {
+            padding: 50px 0;
+        }
+
+        .section-title {
+            border-left: 5px solid var(--primary-brown);
+            padding-left: 15px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .initiative-card {
+            background-color: var(--pure-white);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: transform 0.3s ease;
+        }
+
+        .initiative-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .initiative-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--light-bg);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .initiative-title-area h3 {
+            margin: 0 0 5px 0;
+            font-size: 24px;
+            color: var(--primary-black);
+        }
+
+        .initiative-tagline {
+            font-size: 14px;
+            color: var(--primary-brown);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .metric-badge {
+            border: 2px solid var(--accent-gold);
+            color: var(--primary-black);
+            padding: 6px 14px;
+            font-weight: bold;
+            font-size: 13px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background-color: #FFFDF4;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 992px) {
+            .grid-3 {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        .info-column h4 {
+            margin: 0 0 12px 0;
+            text-transform: uppercase;
+            font-size: 14px;
+            color: var(--primary-black);
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 6px;
+        }
+
+        .info-column p {
+            margin: 0;
+            font-size: 15px;
+            color: #333333;
+        }
+
+        .info-column ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .info-column li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .tech-integration {
+            background-color: #FDFBF7;
+            border: 1px dashed var(--primary-brown);
+            padding: 15px 20px;
+            margin-top: 25px;
+            font-size: 13px;
+            border-radius: 4px;
+            color: #4e342e;
+        }
+
+        .tech-integration strong {
+            color: var(--primary-black);
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 0.5px;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        footer {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            text-align: center;
+            padding: 30px 0;
+            font-size: 13px;
+            border-top: 4px solid var(--primary-brown);
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: #888888;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-grid">
+            <div class="brand">
+                <h1>Thin Black & Brown <span>Lines USA</span></h1>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="identity.html">Identity</a>
+                <a href="initiatives.html" class="active">Action Lines</a>
+                <a href="grants.html">Grants</a>
+                <a href="github-village.html">GitHub Village</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <h2>Our Core Initiatives</h2>
+            <p>Dismantling structural dependency, reclaiming digital identity sovereignty, and establishing baseline corporate and algorithmic accountability for communities of color.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <h2 class="section-title">Programmatic Deployments</h2>
+
+        <div class="initiative-card">
+            <div class="initiative-header">
+                <div class="initiative-title-area">
+                    <h3>Digital Human Sovereignty Academy</h3>
+                    <div class="initiative-tagline">Education & Psychological Liberation</div>
+                </div>
+                <div class="metric-badge">Target: 1,500 Profiles Certified</div>
+            </div>
+            <div class="grid-3">
+                <div class="info-column">
+                    <h4>Meaning & Impact</h4>
+                    <p>Designed to break dependencies on historical tracking methods and outdated physical documentation. This academy shifts Black and Brown individuals away from vulnerable, centralized tracking models toward true cryptographic ownership of their biological records, identity parameters, and likenesses.</p>
+                </div>
+                <div class="info-column">
+                    <h4>Core Objectives</h4>
+                    <ul>
+                        <li>Train urban communities and seniors in modern data defense.</li>
+                        <li>Provide hands-on workshops for setting up decentralised identities.</li>
+                        <li>Issue secure "Certified Digital Human" completion credentials.</li>
+                    </ul>
+                </div>
+                <div class="info-column">
+                    <h4>Curriculum Highlights</h4>
+                    <ul>
+                        <li><strong>Weeks 1–2:</strong> History of identity tracing in America.</li>
+                        <li><strong>Weeks 3–4:</strong> Hands-on setups using cryptographic parameters.</li>
+                        <li><strong>Weeks 5–6:</strong> Monetization structures via distributed compute systems.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tech-integration">
+                <strong>Advanced Ecosystem Integration</strong>
+                Powered by the open-source architectures of REALAiiD.com and the decentralized framework of Bio-Sign™ to guarantee hardware-bound cryptographic protection for every graduate.
+            </div>
+        </div>
+
+        <div class="initiative-card">
+            <div class="initiative-header">
+                <div class="initiative-title-area">
+                    <h3>Biometric Defense & Corporate Accountability Lab</h3>
+                    <div class="initiative-tagline">Civil Rights & Algorithmic Transparency</div>
+                </div>
+                <div class="metric-badge">Target: 5 Regional Hubs</div>
+            </div>
+            <div class="grid-3">
+                <div class="info-column">
+                    <h4>Meaning & Impact</h4>
+                    <p>Bridges the gap between historical wealth architectures constructed on exploitation and modern automated surveillance profiles. The Lab trains advocates to trace legacy corporate lineages while deploying technological tools to neutralize racial bias in public AI camera spaces.</p>
+                </div>
+                <div class="info-column">
+                    <h4>Core Objectives</h4>
+                    <ul>
+                        <li>Train citizens to map and challenge institutional wealth pipelines.</li>
+                        <li>Provide toolsets to detect and dispute hidden algorithmic profiles.</li>
+                        <li>Deploy community safety setups using neutral validation edge nodes.</li>
+                    </ul>
+                </div>
+                <div class="info-column">
+                    <h4>Programmatic Structure</h4>
+                    <ul>
+                        <li><strong>Corporate Ancestry Audits:</strong> Unveiling historical assets built on exploitation.</li>
+                        <li><strong>SentryAi Node Deployments:</strong> Training cohorts to place neutral data logs.</li>
+                        <li><strong>Anti-Deepfake Clinics:</strong> Safeguarding community leaders from likeness theft.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tech-integration">
+                <strong>Advanced Ecosystem Integration</strong>
+                Utilizes localized, decentralized SentryAi computing nodes to build secure community zones that track local parameters neutrally, entirely independent of public or state-run automated profiles.
+            </div>
+        </div>
+
+        <div class="initiative-card">
+            <div class="initiative-header">
+                <div class="initiative-title-area">
+                    <h3>Youth Likeness Rights & Leadership Initiative</h3>
+                    <div class="initiative-tagline">Intellectual Property & Wealth Generation</div>
+                </div>
+                <div class="metric-badge">Target: 500 Unique Assets Secured</div>
+            </div>
+            <div class="grid-3">
+                <div class="info-column">
+                    <h4>Meaning & Impact</h4>
+                    <p>While minority youth continuously define global culture and artistic movements, structural parameters often strip them of long-term economic gains. This initiative instills a culture of absolute ownership, protecting young creators from digital exploitation by tech and media monopolies.</p>
+                </div>
+                <div class="info-column">
+                    <h4>Core Objectives</h4>
+                    <ul>
+                        <li>Partner with urban schools to teach identity and asset validation.</li>
+                        <li>Secure intellectual property tracks using biometric timestamping.</li>
+                        <li>Provide micro-grants for independent media portfolios.</li>
+                    </ul>
+                </div>
+                <div class="info-column">
+                    <h4>Programmatic Structure</h4>
+                    <ul>
+                        <li><strong>My Identity, My Asset:</strong> Unpacking algorithmic cultural extraction.</li>
+                        <li><strong>Blockchain & The Brand:</strong> Cryptographically locking media before release.</li>
+                        <li><strong>The Sovereign Tracks:</strong> Creating self-sustaining independent production entities.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="tech-integration">
+                <strong>Advanced Ecosystem Integration</strong>
+                Anchored directly to the $AII Compute Currency economy to teach youth how to store, encrypt, and natively monetize digital content without reliance on third-party aggregators.
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Thin Black & Brown Lines USA, Inc. | TGSOBAUSA.ORG | All Rights Reserved.</p>
+            <p>Compliance Contact | Principal Investigator: Nehemiah M. Brown | solomonkinllc@gmail.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+```

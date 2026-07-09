@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Architecture Portal | Thin Black & Brown Lines USA</title>
+    <style>
+        :root {
+            --primary-black: #111111;
+            --primary-brown: #795548;
+            --accent-gold: #D4AF37;
+            --light-bg: #F9F9F9;
+            --pure-white: #FFFFFF;
+            --border-color: #E0E0E0;
+            --text-muted: #666666;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: var(--light-bg);
+            color: var(--primary-black);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            border-bottom: 4px solid var(--primary-brown);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .brand h1 {
+            margin: 0;
+            font-size: 22px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .brand span {
+            color: var(--primary-brown);
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav a {
+            color: var(--pure-white);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+            padding: 5px 0;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-gold);
+            border-bottom: 2px solid var(--accent-gold);
+        }
+
+        .hero-section {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero-section h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-section p {
+            font-size: 18px;
+            color: var(--border-color);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        main {
+            padding: 50px 0;
+        }
+
+        .section-title {
+            border-left: 5px solid var(--primary-brown);
+            padding-left: 15px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 24px;
+        }
+
+        /* Terminal Style Banner */
+        .terminal-banner {
+            background-color: #000000;
+            color: #A9F5A9;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 30px;
+            border-radius: 4px;
+            border-left: 6px solid var(--accent-gold);
+            margin-bottom: 40px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .terminal-header {
+            color: var(--text-muted);
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #222222;
+            padding-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .terminal-line {
+            margin: 5px 0;
+        }
+
+        .terminal-command {
+            color: var(--pure-white);
+        }
+
+        /* 4 Development Branches Grid */
+        .branch-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .branch-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .branch-card {
+            background-color: var(--pure-white);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.01);
+        }
+
+        .branch-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--primary-black);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .branch-path {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 13px;
+            color: var(--primary-brown);
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .branch-card p {
+            font-size: 14px;
+            color: #444444;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* Readme Simulation Section */
+        .readme-container {
+            background-color: var(--pure-white);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 40px;
+            margin-top: 50px;
+        }
+
+        .readme-header {
+            border-bottom: 2px solid var(--light-bg);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
+        .readme-header h3 {
+            margin: 0;
+            font-size: 22px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .readme-body h4 {
+            margin: 25px 0 10px 0;
+            text-transform: uppercase;
+            font-size: 15px;
+            color: var(--primary-brown);
+        }
+
+        .readme-body p, .readme-body li {
+            font-size: 15px;
+            color: #333333;
+        }
+
+        .readme-body ul {
+            padding-left: 20px;
+        }
+
+        .readme-body li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            padding: 40px 0 30px 0;
+            text-align: center;
+            font-size: 13px;
+            border-top: 4px solid var(--primary-brown);
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: #888888;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header>
+        <div class="container header-grid">
+            <div class="brand">
+                <h1>Thin Black & Brown <span>Lines USA</span></h1>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="identity.html">Identity</a>
+                <a href="initiatives.html">Action Lines</a>
+                <a href="grants.html">Grants</a>
+                <a href="join.html">Join The Village</a>
+                <a href="github-village.html" class="active">Core Architecture Portal</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h2>Core Architecture Portal</h2>
+            <p>The technical engine room for Sovereign-Village-OS. Transitioning community advocacy into robust open-source software networks and decentralized architectural infrastructure.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- Live Terminal Ingestion Feed -->
+        <div class="terminal-banner">
+            <div class="terminal-header">Sovereign-Village-OS // Mainframe Diagnostic Console</div>
+            <div class="terminal-line"><span class="terminal-command">tbblusa@os:~$</span> initializing deployment handshake...</div>
+            <div class="terminal-line"><span class="terminal-command">tbblusa@os:~$</span> syncing repository files with active network nodes...</div>
+            <div class="terminal-line"><span class="terminal-command">tbblusa@os:~$</span> STATUS: Core Architecture Pipeline Active [2026-07]</div>
+        </div>
+
+        <h2 class="section-title">Development Branches</h2>
+        
+        <!-- Active Branches Mapping -->
+        <div class="branch-grid">
+            <!-- Branch 1 -->
+            <div class="branch-card">
+                <h3>⚖️ The Justice Branch</h3>
+                <span class="branch-path">/justice-code</span>
+                <p>Replacing standard structural remediation models with transparent, unyielding parameters of human integrity. This core environment runs our specialized mentorship algorithms and distributed reentry blueprints.</p>
+            </div>
+
+            <!-- Branch 2 -->
+            <div class="branch-card">
+                <h3>🏠 The Infrastructure Branch</h3>
+                <span class="branch-path">/pillar-house</span>
+                <p>Architectural engineering blueprints and localized site layout parameters for our physical "Pillar House" facilities, organizing urban scaling from Philadelphia to a national footprint.</p>
+            </div>
+
+            <!-- Branch 3 -->
+            <div class="branch-card">
+                <h3>📈 The Economic Branch</h3>
+                <span class="branch-path">/economic-foundry</span>
+                <p>Technical training configurations and compliance scripts tailored to empower local enterprises to win government contract bids, coupled with management layers for subscription allocation.</p>
+            </div>
+
+            <!-- Branch 4 -->
+            <div class="branch-card">
+                <h3>🤝 The Community Branch</h3>
+                <span class="branch-path">/pillar-clubs</span>
+                <p>Distributed coordination scripts, localized network toolsets, and platform configurations for managing identity awareness frameworks, digital registry databases, and civic validation campaigns.</p>
+            </div>
+        </div>
+
+        <!-- Integrated README Repository Vault -->
+        <div class="readme-container">
+            <div class="readme-header">
+                <h3>🏛️ REPOSITORY_MANIFEST: README.md</h3>
+            </div>
+            <div class="readme-body">
+                <h4>Ecosystem Overview</h4>
+                <p>Thin Black & Brown Lines USA (TBBLUSA) is a solution-based nonprofit corporation. This repository serves as the digital engine-room for our movement. We are moving beyond social justice "correction" to Total Community Architecture. By utilizing GitHub, we provide a transparent, collaborative "Village" where community members, government agencies, and corporate partners can contribute to the restoration of Black and Brown communities.</p>
+                
+                <h4>The Great Seal of Black Americans (TGSOBA)</h4>
+                <p>This repository officially documents the existence and identity of our people. The copyrighted "Great Seal of Black and Brown People" is the anchor of our identity. We utilize this framework to protect AI-identities and issue the Official Identity Coin—a monumental certificate of sovereignty.</p>
+
+                <h4>How to Contribute</h4>
+                <ul>
+                    <li><strong>Fork this Repo:</strong> Copy our community blueprints for your local city development needs.</li>
+                    <li><strong>Submit a Pull Request:</strong> Contribute standardized legal templates, economic matrices, or educational documentation layers.</li>
+                    <li><strong>Join the Village:</strong> Visit our digital registry intake environment to activate your baseline tier.</li>
+                </ul>
+                
+                <p style="margin-top: 30px; font-style: italic; font-weight: bold; color: var(--primary-brown); text-align: center;">
+                    "Justice Denied anywhere diminishes justice everywhere!" — MLK
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Formal Corporate Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Thin Black & Brown Lines USA, Inc. | TGSOBAUSA.ORG | All Rights Reserved.</p>
+            <p>Core Architecture Support Core | Chief Technology Officer: Nehemiah M. Brown | solomonkinllc@gmail.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>

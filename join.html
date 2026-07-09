@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join The Village | Thin Black & Brown Lines USA</title>
+    <style>
+        :root {
+            --primary-black: #111111;
+            --primary-brown: #795548;
+            --accent-gold: #D4AF37;
+            --light-bg: #F9F9F9;
+            --pure-white: #FFFFFF;
+            --border-color: #E0E0E0;
+            --text-muted: #666666;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: var(--light-bg);
+            color: var(--primary-black);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            border-bottom: 4px solid var(--primary-brown);
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .brand h1 {
+            margin: 0;
+            font-size: 24px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .brand span {
+            color: var(--primary-brown);
+        }
+
+        nav a {
+            color: var(--pure-white);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-brown);
+        }
+
+        .hero-section {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero-section h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: var(--pure-white);
+        }
+
+        .hero-section p {
+            font-size: 18px;
+            color: var(--border-color);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        main {
+            padding: 50px 0;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 992px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        .section-title {
+            border-left: 5px solid var(--primary-brown);
+            padding-left: 15px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-card {
+            background-color: var(--pure-white);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 35px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .info-card h3 {
+            margin: 0 0 15px 0;
+            text-transform: uppercase;
+            font-size: 20px;
+            color: var(--primary-black);
+            letter-spacing: 0.5px;
+        }
+
+        .info-card p {
+            font-size: 15px;
+            color: #444444;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        .track-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .track-item {
+            background-color: var(--light-bg);
+            border-left: 4px solid var(--primary-brown);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .track-item strong {
+            display: block;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: var(--primary-black);
+            margin-bottom: 3px;
+        }
+
+        .track-item p {
+            margin: 0;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .form-card {
+            background-color: var(--pure-white);
+            border: 1px solid var(--border-color);
+            border-top: 5px solid var(--primary-black);
+            border-radius: 4px;
+            padding: 35px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+            background-color: var(--light-bg);
+            transition: border-color 0.3s, background-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-brown);
+            background-color: var(--pure-white);
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            background-color: var(--light-bg);
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            font-weight: normal;
+            text-transform: none;
+            cursor: pointer;
+        }
+
+        .checkbox-label input {
+            margin-right: 10px;
+            transform: scale(1.1);
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            border: none;
+            padding: 15px;
+            font-size: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, border-bottom 0.1s;
+            border-bottom: 3px solid var(--primary-brown);
+        }
+
+        .btn-submit:hover {
+            background-color: #222222;
+        }
+
+        .btn-submit:active {
+            border-bottom-width: 1px;
+            transform: translateY(2px);
+        }
+
+        footer {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            text-align: center;
+            padding: 30px 0;
+            font-size: 13px;
+            border-top: 4px solid var(--primary-brown);
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: #888888;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-grid">
+            <div class="brand">
+                <h1>Thin Black & Brown <span>Lines USA</span></h1>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="identity.html">Identity</a>
+                <a href="initiatives.html">Action Lines</a>
+                <a href="grants.html">Grants</a>
+                <a href="github-village.html">GitHub Village</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <h2>Join The Village</h2>
+            <p>The centralized intake and engagement hub where everyday citizens formally enter our organizational ecosystem, step into active roles, and fortify community sovereignty.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="grid-2">
+            
+            <!-- Left Column: Context and Tracks -->
+            <div>
+                <h2 class="section-title">An Organized Community</h2>
+                <div class="info-card">
+                    <h3>Operational Alignment</h3>
+                    <p>Thin Black and Brown Lines USA does not maintain a passive membership base. We operate as an aligned, solution-based ecosystem extending structural support across the country. By joining the Village, you transition from a spectator to an active contributor, helping deploy protective technological tools, run decentralized digital literacy cohorts, and challenge legacy institutional structures.</p>
+                    
+                    <ul class="track-list">
+                        <li class="track-item">
+                            <strong>Sovereign Advocacy & Field Work</strong>
+                            <p>Engage in direct community outreach, baseline legal clinics, and coordinate localized Freedom of Information Act (FOIA) public profile request initiatives.</p>
+                        </li>
+                        <li class="track-item">
+                            <strong>Technical Integration & Infrastructure</strong>
+                            <p>Contribute to the open-source Sovereign-Village-OS repository, manage decentralized node layouts, or support algorithmic equity audits.</p>
+                        </li>
+                        <li class="track-item">
+                            <strong>Educational Mentorship & Re-entry</strong>
+                            <p>Serve as a workforce mentor, digital human literacy trainer, or financial wellness assistant within our regional counseling cohorts.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Column: Intake Form -->
+            <div>
+                <h2 class="section-title">Intake & Engagement Registry</h2>
+                <div class="form-card">
+                    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Intake compiled successfully into the database registry.');">
+                        
+                        <div class="form-group">
+                            <label for="full-name">Full Legal Name</label>
+                            <input type="text" id="full-name" class="form-control" placeholder="John Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email-address">Secure Email Address</label>
+                            <input type="email" id="email-address" class="form-control" placeholder="name@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone-number">Contact Number</label>
+                            <input type="tel" id="phone-number" class="form-control" placeholder="215-555-0199" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="location">Location (City, State)</label>
+                            <input type="text" id="location" class="form-control" placeholder="Philadelphia, PA" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Primary Engagement Track</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="tracks" value="advocacy"> General Membership & Civic Advocacy
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="tracks" value="tech"> Open-Source Dev / Sovereign-Village-OS
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="tracks" value="education"> Digital Human Literacy & Mentorship
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="tracks" value="counseling"> Financial & Procurement Strategy
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="notes">Briefly state your technical or administrative background</label>
+                            <textarea id="notes" class="form-control" rows="4" placeholder="Detail any operational experience, organizational alignments, or specific technical skill sets you bring to the ecosystem..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Formally Register Intake</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Thin Black & Brown Lines USA, Inc. | TGSOBAUSA.ORG | All Rights Reserved.</p>
+            <p>Compliance Contact | Principal Investigator: Nehemiah M. Brown | solomonkinllc@gmail.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>

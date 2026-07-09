@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grant Initiatives & Procurement | Thin Black & Brown Lines USA</title>
+    <style>
+        :root {
+            --primary-black: #111111;
+            --primary-brown: #795548;
+            --accent-gold: #D4AF37;
+            --light-bg: #F9F9F9;
+            --pure-white: #FFFFFF;
+            --border-color: #E0E0E0;
+            --text-muted: #666666;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: var(--light-bg);
+            color: var(--primary-black);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            border-bottom: 4px solid var(--primary-brown);
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .brand h1 {
+            margin: 0;
+            font-size: 24px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .brand span {
+            color: var(--primary-brown);
+        }
+
+        nav a {
+            color: var(--pure-white);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-brown);
+        }
+
+        .hero-section {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero-section h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: var(--pure-white);
+        }
+
+        .hero-section p {
+            font-size: 18px;
+            color: var(--border-color);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .compliance-bar {
+            background-color: var(--pure-white);
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px 0;
+            font-size: 13px;
+        }
+
+        .compliance-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-weight: bold;
+        }
+
+        .compliance-item span {
+            color: var(--primary-brown);
+        }
+
+        main {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            border-left: 5px solid var(--primary-brown);
+            padding-left: 15px;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .rfp-card {
+            background-color: var(--pure-white);
+            border: 1px solid var(--border-color);
+            border-top: 5px solid var(--primary-black);
+            border-radius: 4px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .rfp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            border-bottom: 2px solid var(--light-bg);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .rfp-title-area h3 {
+            margin: 0 0 5px 0;
+            font-size: 22px;
+            color: var(--primary-black);
+        }
+
+        .rfp-id {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: bold;
+        }
+
+        .rfp-badge {
+            background-color: var(--primary-brown);
+            color: var(--pure-white);
+            padding: 8px 15px;
+            font-weight: bold;
+            font-size: 14px;
+            border-radius: 3px;
+            text-transform: uppercase;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .info-block h4 {
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            font-size: 15px;
+            color: var(--primary-brown);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+        }
+
+        .info-block ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .info-block li {
+            margin-bottom: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: var(--pure-white);
+        }
+
+        th {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            text-align: left;
+            padding: 12px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 14px;
+        }
+
+        tr:nth-child(even) td {
+            background-color: #FDFDFD;
+        }
+
+        .total-row td {
+            font-weight: bold;
+            background-color: #F5F5F5 !important;
+            border-top: 2px solid var(--primary-black);
+            border-bottom: 2px solid var(--primary-black);
+        }
+
+        .partnership-notice {
+            background-color: #FFFDE7;
+            border: 1px solid #FFF59D;
+            border-left: 5px solid var(--accent-gold);
+            padding: 20px;
+            margin-top: 30px;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+
+        .partnership-notice h4 {
+            margin: 0 0 8px 0;
+            color: #F57F17;
+            text-transform: uppercase;
+        }
+
+        footer {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            text-align: center;
+            padding: 30px 0;
+            font-size: 13px;
+            border-top: 4px solid var(--primary-brown);
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: #888888;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-grid">
+            <div class="brand">
+                <h1>Thin Black & Brown <span>Lines USA</span></h1>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="identity.html">Identity</a>
+                <a href="action-lines.html">Action Lines</a>
+                <a href="grants.html" class="active">Grants</a>
+                <a href="github-village.html">GitHub Village</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <h2>Grants & Municipal Procurement</h2>
+            <p>Transparent fiscal deployment, administrative capability blueprints, and institutional proposals aligned with municipal, state, and federal social equity contract bids.</p>
+        </div>
+    </section>
+
+    <div class="compliance-bar">
+        <div class="container compliance-grid">
+            <div class="compliance-item">UEI: <span>H8YDYLEK6283</span></div>
+            <div class="compliance-item">EIN: <span>824565975</span></div>
+            <div class="compliance-item">DUNS: <span>145053632</span></div>
+            <div class="compliance-item">SBC ID: <span>SBC_002678850</span></div>
+        </div>
+    </div>
+
+    <main class="container">
+        <h2 class="section-title">Active Municipal Proposals</h2>
+
+        <!-- RFP Section -->
+        <div class="rfp-card">
+            <div class="rfp-header">
+                <div class="rfp-title-area">
+                    <h3>Student Loan Counseling Services</h3>
+                    <div class="rfp-id">City of Philadelphia | RFP #21260612171032</div>
+                </div>
+                <div class="rfp-badge">Target Funding: $250,000</div>
+            </div>
+
+            <div class="grid-2">
+                <div class="info-block">
+                    <h4>Program Overview & Scope</h4>
+                    <p>Thin Black and Brown Lines USA is responding as the primary non-profit applicant to deploy a dedicated, high-impact financial coaching asset inside the City of Philadelphia. Modeled after successful national blueprints, this programmatic wing delivers 1:1 comprehensive counseling with heavy emphasis on student loan management, predatory debt relief, and structural credit rehabilitation.</p>
+                </div>
+                <div class="info-block">
+                    <h4>Execution Framework & Strategy</h4>
+                    <ul>
+                        <li><strong>Lead Applicant:</strong> Thin Black and Brown Lines USA (tbblusa.org) — Managed as a specialized programmatic wing.</li>
+                        <li><strong>Operations & Tech Partner:</strong> Solomon Kin, LLC (Subcontractor providing strict logistics, reporting software, and master-level execution).</li>
+                        <li><strong>Facility Logistics:</strong> Dedicated 1,500–2,000 sq. ft. Center City Philadelphia commercial office hub located near City Hall / 1617 JFK Blvd, outfitted with private counseling modules and secure file physical lockups.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="info-block">
+                <h4>Line-Item Budget Allocation</h4>
+                <p>The following balanced allocation grid dictates the strict deployment of the complete $250,000 municipal contract allocation to ensure maximum operational efficacy and administrative transparency:</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category / Personnel Role</th>
+                            <th>Allocation Type</th>
+                            <th>Primary Program Function & Scope of Work</th>
+                            <th>Annual Budget</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Program Director / Lead Counselor</strong></td>
+                            <td>Direct Service Personnel</td>
+                            <td>Full-time operational leadership, case management, and City Hall reporting metrics.</td>
+                            <td>$65,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Financial Counselors (x3)</strong></td>
+                            <td>Direct Service Personnel</td>
+                            <td>Full-time 1:1 student loan coaching, debt structuring, and forgiveness pathways.</td>
+                            <td>$165,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Part-Time Administrative Support</strong></td>
+                            <td>Direct Service Personnel</td>
+                            <td>Client intake verification, secure scheduling software data entry, and documentation.</td>
+                            <td>$25,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Solomon Kin, LLC Subcontract</strong></td>
+                            <td>Technical & Personnel Management</td>
+                            <td>Technical infrastructure, secure portal oversight, and programmatic logistics (PI Nehemiah M. Brown, D. Ball, M. Brown).</td>
+                            <td>$95,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Facility Lease & Utilities</strong></td>
+                            <td>Operating Cost</td>
+                            <td>Securing and maintaining the Center City physical hub and secure physical storage nodes.</td>
+                            <td>$48,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Transportation & Client Support</strong></td>
+                            <td>Operating Cost</td>
+                            <td>Direct neighborhood outreach transit lines, client logistics, and emergency accessibility funds.</td>
+                            <td>$12,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Marketing, Outreach & Supplies</strong></td>
+                            <td>Operating Cost</td>
+                            <td>Metropolitan informational campaigns, literacy workshop materials, and physical prints.</td>
+                            <td>$15,000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Secure Technology & Licensing Tools</strong></td>
+                            <td>Operating Cost</td>
+                            <td>Deploying secure consumer portals, credential validation links, and privacy-shielded architectures.</td>
+                            <td>$10,000</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td colspan="3">TOTAL ALLOCATED INITIATIVE INVESTMENT TARGET</td>
+                            <td>$250,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="partnership-notice">
+                <h4>Institutional Collaboration & Compliance Memo</h4>
+                <p>In accordance with municipal private-inurement regulations and structural non-profit guidelines, all technical integrations, operational management software, and security protocols provided by Solomon Kin, LLC are governed under verified, fair-market-value Memorandums of Understanding (MOUs) held within our public Stewardship Archives. Primary executive leadership is directed by Principal Investigator Nehemiah M. Brown (Chief Technology Officer).</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Thin Black & Brown Lines USA, Inc. | TGSOBAUSA.ORG | All Rights Reserved.</p>
+            <p>Principal Investigator: Nehemiah M. Brown, Chief Technology Officer | solomonkinllc@gmail.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>

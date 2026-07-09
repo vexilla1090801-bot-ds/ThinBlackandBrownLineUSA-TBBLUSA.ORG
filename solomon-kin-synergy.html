@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solomon Kin LLC Synergy | Thin Black & Brown Lines USA</title>
+    <style>
+        :root {
+            --primary-black: #111111;
+            --primary-brown: #795548;
+            --accent-gold: #D4AF37;
+            --light-bg: #F9F9F9;
+            --pure-white: #FFFFFF;
+            --border-color: #E0E0E0;
+            --text-muted: #666666;
+            --dark-gold: #AA820A;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: var(--light-bg);
+            color: var(--primary-black);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            border-bottom: 4px solid var(--primary-brown);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-grid {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .brand h1 {
+            margin: 0;
+            font-size: 22px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .brand span {
+            color: var(--primary-brown);
+        }
+
+        nav a {
+            color: var(--pure-white);
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            font-size: 13px;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-gold);
+        }
+
+        .hero-section {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero-section h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-section p {
+            font-size: 18px;
+            color: var(--border-color);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        main {
+            padding: 50px 0;
+        }
+
+        .section-title {
+            border-left: 5px solid var(--primary-brown);
+            padding-left: 15px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 24px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: 992px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background-color: var(--pure-white);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 35px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.01);
+            box-sizing: border-box;
+        }
+
+        .synergy-info h3 {
+            margin-top: 0;
+            text-transform: uppercase;
+            font-size: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .synergy-info p {
+            font-size: 15px;
+            color: #444444;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        blockquote {
+            background-color: #FFFDF9;
+            border-left: 4px solid var(--accent-gold);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 4px 4px 0;
+            font-size: 14px;
+            color: #555555;
+            text-align: justify;
+        }
+
+        blockquote strong {
+            color: var(--primary-black);
+            display: block;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            font-size: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+            background-color: var(--light-bg);
+            transition: border-color 0.3s, background-color 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-brown);
+            background-color: var(--pure-white);
+        }
+
+        .btn-submit {
+            display: block;
+            width: 100%;
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            border: none;
+            padding: 15px;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            cursor: pointer;
+            border-bottom: 3px solid var(--primary-brown);
+            transition: background-color 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #222222;
+        }
+
+        footer {
+            background-color: var(--primary-black);
+            color: var(--pure-white);
+            padding: 40px 0;
+            text-align: center;
+            font-size: 13px;
+            border-top: 4px solid var(--primary-brown);
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            color: #888888;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-grid">
+            <div class="brand">
+                <h1>Thin Black & Brown <span>Lines USA</span></h1>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="procurement-hub.html">Procurement Hub</a>
+                <a href="github-village.html">Core Architecture</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="container">
+            <h2>Solomon Kin LLC Synergy</h2>
+            <p>The Non-Profit / For-Profit Hybrid Infrastructure Framework for Scalable Execution</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="grid-2">
+            
+            <!-- Strategic Synergy & Regulatory Audit Info -->
+            <div class="card synergy-info">
+                <h3>The Hybrid Engine Mechanics</h3>
+                <p>
+                    Thin Black and Brown Lines USA balances strict non-profit mission values with corporate performance parameters. To fulfill complex municipal program goals, digital human literacy academies, and physical node builds safely and effectively, we utilize a formal non-profit/for-profit partnership layout.
+                </p>
+                <p>
+                    Under a compliant, audited Memorandum of Understanding (MOU), our organization retains <strong>Solomon Kin LLC</strong> to manage backend deployment logistics, physical spatial hardware, and advanced technology integrations. This framework allows public grant streams to flow directly to the primary non-profit entity for rigorous, unyielding fiscal audit trails while delegating heavy operational responsibilities to a specialized enterprise infrastructure.
+                </p>
+
+                <blockquote>
+                    <strong>Auditor Compliance Statement</strong>
+                    This arrangement ensures that all public resources remain tightly insulated from private inurement parameters. Solomon Kin LLC operates as a contractor at true arm's-length, fair-market value under the direct oversight of Chief Technology Officer and Principal Investigator Nehemiah M. Brown, scaling field capacity effortlessly based on municipal intake volume.
+                </blockquote>
+            </div>
+
+            <!-- Compliance Intake & Partnership Registry -->
+            <div class="card" style="border-top: 5px solid var(--primary-brown);">
+                <h3 style="margin-top:0; font-size: 16px; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px;">
+                    Synergy Engagement & Subcontractor Onboarding
+                </h3>
+                
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Subcontractor profile submitted to the compliance review matrix.');">
+                    <div class="form-group">
+                        <label for="vendor-name">Subcontracting Entity / Professional Name</label>
+                        <input type="text" id="vendor-name" class="form-control" placeholder="e.g., Apex Technical Deployments" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="compliance-uei">Unique Entity ID (UEI) or Tax ID</label>
+                        <input type="text" id="compliance-uei" class="form-control" placeholder="e.g., H8YDYLEK6283" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="synergy-track">Operational Alignment Sector</label>
+                        <select id="synergy-track" class="form-control">
+                            <option value="tech">Edge Infrastructure & Cryptographic Deployment Nodes</option>
+                            <option value="logistics">Spatial Development & Physical Facility Layouts</option>
+                            <option value="training">Procurement Curriculums & Institutional Workforce Training</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="performance-abstract">Capability & Arm's-Length Qualification Overview</label>
+                        <textarea id="performance-abstract" class="form-control" rows="4" placeholder="Detail your firm's specific field equipment assets, background in municipal contract alignment, or past execution performance..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Submit Synergy Registration</button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Thin Black & Brown Lines USA, Inc. | TGSOBAUSA.ORG | All Rights Reserved.</p>
+            <p>Compliance, Auditing & Corporate Synergy Matrix | Principal Investigator: Nehemiah M. Brown | solomonkinllc@gmail.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>
